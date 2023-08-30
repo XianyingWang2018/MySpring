@@ -1,5 +1,6 @@
 package org.springframework.test.ioc;
 
+import static org.assertj.core.api.Assertions.*;
 import org.junit.Test;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -8,7 +9,6 @@ import org.springframework.test.service.HelloService;
 import org.springframework.test.service.HelloServiceImpl;
 import org.springframework.test.service.TestService;
 
-import static org.assertj.core.api.Assertions.*;
 
 public class BeanDefinitionAndBeanRegistryTest {
 

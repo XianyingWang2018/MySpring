@@ -3,12 +3,13 @@ package org.springframework.beans.factory.support;
 import org.springframework.beans.BeanException;
 import org.springframework.beans.PropertyValue;
 import org.springframework.beans.PropertyValues;
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanReference;
 
 import java.lang.reflect.Field;
 
-public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory{
+public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory implements AutowireCapableBeanFactory {
 
     private InstantiationStrategy instantiationStrategy = new SimpleInstantiationStrategy();
 
