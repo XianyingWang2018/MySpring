@@ -15,4 +15,12 @@ public class Person {
 
     private Car car;
 
+    public void init(){
+        System.out.println("person init after properties");
+    }
+
+    public void destroy(){
+        System.out.println("person destroy");
+    }
+
 }

@@ -28,6 +28,8 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
     private static final String CLASS_ATTRIBUTE = "class";
     private static final String VALUE_ATTRIBUTE = "value";
     private static final String REF_ATTRIBUTE = "ref";
+    private static final String INIT_METHOD_ATTRIBUTE = "init-method";
+    private static final String DESTROY_METHOD_ATTRIBUTE = "destroy-method";
 
 
     public XmlBeanDefinitionReader(BeanDefinitionRegistry registry) {
@@ -64,6 +66,8 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
                     String id = bean.getAttribute(ID_ATTRIBUTE);
                     String name = bean.getAttribute(NAME_ATTRIBUTE);
                     String className = bean.getAttribute(CLASS_ATTRIBUTE);
+                    String initMethod = bean.getAttribute(INIT_METHOD_ATTRIBUTE);
+                    String destroyMethod = bean.getAttribute(DESTROY_METHOD_ATTRIBUTE);
 
                     // 加载class
                     Class<?> clazz = null;
@@ -80,6 +84,8 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
                     }
                     // 创建beanDefinition
                     BeanDefinition beanDefinition = new BeanDefinition(clazz);
+                    beanDefinition.setInitMethodName(initMethod);
+                    beanDefinition.setDestroyMethodName(destroyMethod);
                     // 解析property属性
                     for(int j = 0 ;  j < bean.getChildNodes().getLength(); j++){
                         if(bean.getChildNodes().item(j) instanceof Element){

@@ -13,6 +13,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
 
     private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<>();
 
+
     @Override
     public Object getBean(String name) throws BeanException {
         Object bean = getSingleton(name);
