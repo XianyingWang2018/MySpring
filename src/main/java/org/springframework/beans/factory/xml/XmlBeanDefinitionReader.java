@@ -110,11 +110,6 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
                     getRegistry().registryBeanDefinition(beanName, beanDefinition);
                 }
             }
-
-
-
-
-
         }
     }
 
