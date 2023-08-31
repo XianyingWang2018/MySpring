@@ -53,7 +53,7 @@ public class BeanFactoryPostProcessAndBeanPostProcessTest {
         beanDefinitionRegistry.addBeanPostProcessor(new BeanPostProcessor() {
             @Override
             public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeanException {
-                System.out.println("CustomerBeanPostProcess#postProcessBeforeInitialization:[" + beanName + "]");
+                System.out.println("CustomerBeanPostProcessor#postProcessBeforeInitialization:[" + beanName + "]");
                 if("car".equals(beanName)){
                     ((Car)bean).setBrand("兰博基尼");
                 }

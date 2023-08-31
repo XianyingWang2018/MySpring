@@ -26,4 +26,14 @@ import java.util.Map;
 public interface BeanFactory {
 
     Object getBean(String name) throws BeanException;
+
+    /**
+     * 根据名称和类型查找bean
+     * @param name
+     * @param requiredType
+     * @return
+     * @param <T>
+     * @throws BeanException
+     */
+    <T> T getBean(String name, Class<T> requiredType) throws BeanException;
 }
