@@ -1,9 +1,5 @@
 package org.springframework.test.ioc;
 
-import org.springframework.beans.factory.BeanFactory;
-import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.*;
 
 
 public class SimpleBeanContainerTest {
