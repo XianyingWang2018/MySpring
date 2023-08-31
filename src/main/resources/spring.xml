@@ -7,7 +7,7 @@
 		 http://www.springframework.org/schema/context
 		 http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-    <bean id="person" class="org.springframework.test.bean.Person">
+    <bean id="person" class="org.springframework.test.bean.Person" scope="prototype">
         <property name="name" value="wxy"/>
         <property name="age" value="10"/>
         <property name="car" ref="car"/>
